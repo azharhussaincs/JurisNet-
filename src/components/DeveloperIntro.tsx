@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Scale, ShieldCheck, GraduationCap, BookOpen } from 'lucide-react';
+import { ArrowRight, Scale, ShieldCheck, GraduationCap, BookOpen, Github } from 'lucide-react';
 
 interface DeveloperIntroProps {
   onEnter: () => void;
@@ -30,6 +30,8 @@ const developers: DeveloperMember[] = [
 ];
 
 export const DeveloperIntro: React.FC<DeveloperIntroProps> = ({ onEnter }) => {
+  const repoUrl = 'https://github.com/azharhussaincs/JurisNet-.git';
+
   return (
     <div className="relative min-h-screen w-full bg-[#0a0c10] text-slate-100 flex flex-col justify-between overflow-hidden selection:bg-amber-900/30 selection:text-amber-200">
       {/* Background Architectural Grid Lines */}
@@ -141,8 +143,8 @@ export const DeveloperIntro: React.FC<DeveloperIntroProps> = ({ onEnter }) => {
           </div>
         </div>
 
-        {/* Primary Action Button: Enter Platform */}
-        <div className="flex flex-col items-center">
+        {/* Action Controls: Enter Platform & Source Code */}
+        <div className="flex flex-col sm:flex-row items-center gap-3.5">
           <button
             onClick={onEnter}
             type="button"
@@ -151,6 +153,16 @@ export const DeveloperIntro: React.FC<DeveloperIntroProps> = ({ onEnter }) => {
             <span>Enter Platform</span>
             <ArrowRight className="w-4 h-4 text-slate-700 group-hover:text-slate-950 group-hover:translate-x-0.5 transition-all duration-150" />
           </button>
+
+          <a
+            href={repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#10131a] hover:bg-[#151a26] text-slate-200 hover:text-white border border-white/[0.1] hover:border-white/[0.2] font-semibold text-sm tracking-wide rounded-md transition-all duration-150 cursor-pointer shadow-sm group"
+          >
+            <Github className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" />
+            <span>Source Code</span>
+          </a>
         </div>
       </main>
 
