@@ -1,0 +1,6 @@
+{
+  "name": "JurisNet — Legal Professional Network",
+  "description": "An exclusive, high-trust social networking and professional collaboration platform designed specifically for legal practitioners, advocates, and jurists.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

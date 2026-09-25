@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: "Newsreader", Georgia, serif;
+    --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #090a0f;
+    color: #e2e8f0;
+    min-height: 100vh;
+  }
+}
+
+.font-serif-legal {
+  font-family: "Newsreader", Georgia, serif;
+}
+
+.font-sans-legal {
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
